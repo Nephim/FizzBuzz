@@ -14,7 +14,7 @@ int main(int argc, char** argv) {
   	for(int i = atoi(argv[2]); i <= atoi(argv[3]); ++i) {
 		if (i % 3 == 0) {
 	  		printf("Fizz");
-	  		fprintf(f, "Fizz");
+			fprintf(f, "Fizz");
 		}
 		if (i % 5 == 0) {
 	  		printf("Buzz");
@@ -26,7 +26,7 @@ int main(int argc, char** argv) {
 		}
 		printf("\n");
 		fprintf(f, "\n");
-  	}
+	}
   	return 0;
 }
 
