@@ -1,7 +1,10 @@
 #include <stdio.h>
 
+FILE* open(const char* path, const char* mode);
+
+
 int main() {
-  FILE* f = open("out.log", "r");
+  FILE* f = open("out.log", "w+");
   for(int i = 0; i <= 15; ++i) {
     if (i % 3 == 0) {
       printf("Fizz");
@@ -16,12 +19,13 @@ int main() {
       fprintf(f, "%d", i);
     }
     printf("\n");
+	fprintf(f,"\n");
   }
   return 0;
 }
 
 FILE* open(const char* path, const char* mode) {
-  fopen(path, mode);
+  return fopen(path, mode);
 }
 
 // Hint: Check out https://man7.org/linux/man-pages/man3/fopen.3.html
